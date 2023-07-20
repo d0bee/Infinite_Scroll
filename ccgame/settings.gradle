@@ -10,7 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        /MPAndroidChart/
+        /MPAndroidChart./
         maven { url 'https://jitpack.io' }
     }
 }
