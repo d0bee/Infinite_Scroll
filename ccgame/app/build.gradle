@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt' // binding
 }
 
 android {
@@ -22,6 +24,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    viewBinding{
+        enabled = true
+    }
+    //binding
+    buildFeatures {
+        dataBinding = true
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -32,7 +42,7 @@ android {
 }
 
 dependencies {
-    /MPAndroidChart./
+    //MPAndroidChart
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     implementation 'androidx.core:core-ktx:1.7.0'
