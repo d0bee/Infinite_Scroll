@@ -6,6 +6,8 @@ import android.os.Bundle
 import com.example.ccgame.databinding.ActivityMainBinding
 // MPCHART 사용시 필요한 import문
 import com.github.mikephil.charting.data.*
+// 그외 ex) Color, SetDraw
+import android.graphics.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         val entries = ArrayList<CandleEntry>()
         for (csStock in DataUtil.getCSStockData()) {
             entries.add(CandleEntry(
