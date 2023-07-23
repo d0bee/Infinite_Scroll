@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         val entries = ArrayList<CandleEntry>()
         for (csStock in DataUtil.getCSStockData()) {
             entries.add(CandleEntry(
